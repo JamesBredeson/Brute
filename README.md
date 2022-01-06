@@ -1,3 +1,37 @@
+UPDATED FOR CLUSTER MODIFICATIONS:
+
+Unlike previous usage, I am testing the script on:
+1 Master RaspberryPi 4B, 8GB ram 64GB SD
+10 Worker Nodes all same config 4B, 8GB, 64GB SD (Using 10 worker because 1 of my new pi's CAT5 port is not working)
+Cluster on tower rack, Fan Cooled
+CAT5 to Switch (NOT POE) 
+Will add a picture of the Cluster at a later time. 
+
+I am testing the code to determine its effeciency with original wallet file provided by original author.
+If this system works and starts processing as ecpected, I will be allowing people to volunteer to add their locked out wallets to the system.
+
+The plan is to build a complete cluster with 48 total pi's
+
+
+Full instructions here:
+1) Assemble your cluster and flash all cards with Raspberry OS or Ubuntu usin Raspberry Pi Imager
+   I am installing Raspberry Pi OS Lite (32bit) 0.5GB I will be running my cluster headless. Kubernettes and Docker will not be used.
+2) SSH into each of your Raspberry Pi's
+   $ ssh root@ipaddress /or/ $ ssh pi@ipaddress
+3) Enter password
+   $ ubunut  or  $ raspberry
+4) Change Password. 
+   $ passwd
+   $ enter your new password and reenter it to comfirm
+5) Run updates 
+   $ sudo apt-get update && sudo apt-get upgrade
+6) Reboot each Pi
+   $ sudo reboot
+
+UPDATED FOR CLUSTER MODIFICATIONS: 
+
+ORIGINAL README FROM 
+
 # BitBruteForce-Wallet
 This is an effective script to Brute Force, the Private Key of any Bitcoin Public Address.
 
